@@ -1,0 +1,312 @@
+/* ServicesGrid.module.css */
+
+.services {
+  width: 100%;
+  padding: 80px 0;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Декоративный контейнер - теперь relative, а не fixed */
+.decorativeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Декоративные элементы */
+.decorativeElement {
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.1s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  will-change: transform;
+  border-radius: 12px;
+  box-shadow: 0 0 20px currentColor;
+  animation: float 8s ease-in-out infinite;
+}
+
+.diamond {
+  border-radius: 12px;
+}
+
+.large {
+  filter: blur(0.5px);
+}
+
+/* Анимация плавания */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  50% {
+    transform: translateY(0px) translateX(10px);
+  }
+  75% {
+    transform: translateY(10px) translateX(5px);
+  }
+}
+
+/* Остальные стили карточек (без изменений) */
+.card {
+  background-color: #131313;
+  padding: 48px 32px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  will-change: transform, opacity;
+}
+
+.card.animated {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 181, 78, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardIcon {
+  color: #00b54e;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardIcon svg {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardIcon svg {
+  transform: scale(1.05);
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.cardDescription {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  will-change: transform, opacity;
+}
+
+.textBlock.animated {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textBlockTitle {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.textBlockDescription {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.firstRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.otherRows {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .card {
+    padding: 35px 25px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .textBlockTitle {
+    font-size: 32px;
+  }
+
+  .textBlockDescription {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .firstRow {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardDescription {
+    font-size: 12px;
+  }
+
+  .textBlock {
+    text-align: center;
+  }
+
+  .textBlockTitle {
+    font-size: 28px;
+  }
+
+  .textBlockDescription {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
+  .textBlockTitle {
+    font-size: 24px;
+  }
+
+  .textBlockDescription {
+    font-size: 14px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .otherRows {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .card {
+    padding: 60px 40px;
+  }
+
+  .cardTitle {
+    font-size: 26px;
+  }
+
+  .textBlockTitle {
+    font-size: 48px;
+  }
+
+  .textBlockDescription {
+    font-size: 20px;
+  }
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .card:active {
+    transform: scale(0.98);
+  }
+}

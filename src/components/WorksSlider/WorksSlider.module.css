@@ -1,0 +1,552 @@
+/* WorksSlider.module.css */
+
+.works {
+  width: 100%;
+  padding: 80px 0 120px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Slider Wrapper */
+.sliderWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: visible;
+}
+
+.sliderContainer {
+  flex: 1;
+  overflow: visible;
+  position: relative;
+  min-height: 600px;
+}
+
+.slide {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+.slideContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  background: #131313;
+  border-radius: 30px;
+  padding: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: visible;
+}
+
+/* Левая часть */
+.slideLeft {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.iconWrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.workTitle {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.workSubtitle {
+  color: #2dca72;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.servicesList {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.serviceTag {
+  background: rgba(45, 202, 114, 0.15);
+  color: #2dca72;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.workDescription {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: auto;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statValue {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+/* Правая часть */
+.slideRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.previewCard {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 202, 114, 0.1) 0%,
+    rgba(45, 202, 114, 0.05) 100%
+  );
+  border-radius: 30px;
+  padding: 50px 40px;
+  text-align: center;
+  border: 1px solid rgba(45, 202, 114, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.previewIcon {
+  color: #2dca72;
+  margin-bottom: 30px;
+}
+
+.previewIcon svg {
+  width: 70px;
+  height: 70px;
+}
+
+.previewTitle {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.previewServices {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.previewServices span {
+  background: rgba(45, 202, 114, 0.2);
+  color: #2dca72;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 13px;
+}
+
+/* Навигационные кнопки */
+.navButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(45, 202, 114, 0.15);
+  border: 1px solid rgba(45, 202, 114, 0.3);
+  color: #2dca72;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.navButton:hover {
+  background: #2dca72;
+  color: #0a0a0a;
+  transform: scale(1.1);
+}
+
+/* Индикаторы */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator.active {
+  width: 30px;
+  border-radius: 5px;
+  background: #2dca72;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Десктоп - полное отображение */
+@media (min-width: 1200px) {
+  .sliderContainer {
+    min-height: 650px;
+  }
+
+  .slideContent {
+    min-height: 550px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sliderContainer {
+    min-height: 700px;
+  }
+
+  .slideContent {
+    min-height: 600px;
+    padding: 60px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .sliderContainer {
+    min-height: 750px;
+  }
+
+  .slideContent {
+    min-height: 650px;
+    padding: 70px;
+  }
+
+  .workDescription {
+    font-size: 18px;
+  }
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .works {
+    padding: 60px 0 100px 0;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .sliderWrapper {
+    gap: 15px;
+  }
+
+  .navButton {
+    width: 45px;
+    height: 45px;
+  }
+
+  .slideContent {
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .workTitle {
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .sliderContainer {
+    min-height: 580px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .works {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .navButton {
+    display: none;
+  }
+
+  .sliderWrapper {
+    gap: 0;
+  }
+
+  .sliderContainer {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .slide {
+    position: relative;
+  }
+
+  .slideContent {
+    grid-template-columns: 1fr;
+    padding: 30px 25px;
+    gap: 0;
+  }
+
+  .slideRight {
+    display: none;
+  }
+
+  .slideLeft {
+    order: 1;
+  }
+
+  .iconWrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .iconWrapper svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .workTitle {
+    font-size: 26px;
+  }
+
+  .workSubtitle {
+    font-size: 14px;
+  }
+
+  .serviceTag {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .workDescription {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .stats {
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .statValue {
+    font-size: 22px;
+  }
+
+  .statLabel {
+    font-size: 12px;
+  }
+
+  .indicators {
+    margin-top: 30px;
+  }
+}
+
+/* Маленькие мобильные */
+@media (max-width: 480px) {
+  .works {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .slideContent {
+    padding: 25px 20px;
+  }
+
+  .workTitle {
+    font-size: 22px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .statValue {
+    font-size: 18px;
+  }
+}
+
+/* Hover эффекты */
+@media (hover: hover) {
+  .navButton:hover {
+    transform: scale(1.1);
+  }
+
+  .indicator:hover {
+    background: #2dca72;
+    transform: scale(1.2);
+  }
+}
+
+/* Добавьте в конец файла WorksSlider.module.css */
+
+/* Декоративный контейнер */
+.decorativeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Декоративные элементы */
+.decorativeElement {
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.1s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  will-change: transform;
+  border-radius: 12px;
+  box-shadow: 0 0 15px currentColor;
+  animation: float 8s ease-in-out infinite;
+}
+
+.square {
+  border-radius: 12px;
+}
+
+.diamond {
+  border-radius: 12px;
+}
+
+/* Анимация плавания */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-8px) translateX(4px);
+  }
+  50% {
+    transform: translateY(0px) translateX(8px);
+  }
+  75% {
+    transform: translateY(8px) translateX(4px);
+  }
+}
+
+/* Мобильные устройства - уменьшаем количество декораций */
+@media (max-width: 768px) {
+  .decorativeContainer {
+    opacity: 0.5;
+  }
+
+  .decorativeElement {
+    animation-duration: 12s;
+  }
+}
+
+@media (max-width: 480px) {
+  .decorativeContainer {
+    display: none;
+  }
+}

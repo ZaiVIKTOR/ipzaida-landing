@@ -1,0 +1,594 @@
+/* Contacts.module.css */
+
+.contactsSection {
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Contacts Grid */
+.contactsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Info Cards */
+.infoCard,
+.ipCard,
+.mapCard {
+  background: #131313;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover,
+.ipCard:hover,
+.mapCard:hover {
+  border-color: rgba(45, 202, 114, 0.3);
+  transform: translateY(-5px);
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardTitle svg {
+  color: #2dca72;
+}
+
+/* Contact Items */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactIcon {
+  width: 50px;
+  height: 50px;
+  background: rgba(45, 202, 114, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dca72;
+  font-size: 24px;
+}
+
+.contactDetails {
+  flex: 1;
+}
+
+.contactLabel {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.contactValue {
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactValue:hover {
+  color: #2dca72;
+}
+
+.contactValueCopy {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0;
+}
+
+.contactValueCopy:hover {
+  color: #2dca72;
+}
+
+/* Working Hours */
+.workingHours {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hourItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hourDays {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+.hourTime {
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Address */
+.address {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.addressNote {
+  color: #2dca72;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* IP Items */
+.ipList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ipItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.ipIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(45, 202, 114, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dca72;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.ipDetails {
+  flex: 1;
+}
+
+.ipLabel {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.ipValue {
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.ipValueCopy {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0;
+  word-break: break-all;
+  text-align: left;
+}
+
+.ipValueCopy:hover {
+  color: #2dca72;
+}
+
+/* Copy Hint */
+.copyHint {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2dca72;
+  color: #0a0a0a;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.contactValueCopy:hover .copyHint,
+.ipValueCopy:hover .copyHint {
+  opacity: 1;
+}
+
+/* Map Card */
+.mapPlaceholder {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 202, 114, 0.05) 0%,
+    rgba(45, 202, 114, 0.02) 100%
+  );
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid rgba(45, 202, 114, 0.2);
+}
+
+.mapContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.mapIcon {
+  font-size: 48px;
+  color: #2dca72;
+}
+
+.mapContent p {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+.mapButton {
+  padding: 10px 24px;
+  background: rgba(45, 202, 114, 0.1);
+  border: 1px solid rgba(45, 202, 114, 0.3);
+  border-radius: 50px;
+  color: #2dca72;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mapButton:hover {
+  background: #2dca72;
+  color: #0a0a0a;
+}
+
+/* Copy Notification */
+.copyNotification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2dca72;
+  color: #0a0a0a;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1000;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Декоративные элементы */
+.decorativeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decorativeElement {
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.1s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  will-change: transform;
+  border-radius: 12px;
+  box-shadow: 0 0 15px currentColor;
+  animation: float 8s ease-in-out infinite;
+}
+
+.square {
+  border-radius: 12px;
+}
+
+.diamond {
+  border-radius: 12px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-8px) translateX(4px);
+  }
+  50% {
+    transform: translateY(0px) translateX(8px);
+  }
+  75% {
+    transform: translateY(8px) translateX(4px);
+  }
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+@media (max-width: 1100px) {
+  .contactsGrid {
+    gap: 30px;
+  }
+
+  .contactValue,
+  .contactValueCopy {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contactsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contactInfo,
+  .ipInfo {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactsSection {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .infoCard,
+  .ipCard,
+  .mapCard {
+    padding: 25px 20px;
+    margin-bottom: 20px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contactIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .contactValue,
+  .contactValueCopy {
+    font-size: 14px;
+  }
+
+  .hourDays,
+  .hourTime {
+    font-size: 14px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
+
+  .ipValue,
+  .ipValueCopy {
+    font-size: 12px;
+  }
+
+  .mapPlaceholder {
+    padding: 30px;
+  }
+
+  .decorativeElement {
+    opacity: 0.08;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactsSection {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .infoCard,
+  .ipCard,
+  .mapCard {
+    padding: 20px 15px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .contactItem {
+    gap: 12px;
+  }
+
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .contactLabel {
+    font-size: 11px;
+  }
+
+  .contactValue,
+  .contactValueCopy {
+    font-size: 13px;
+  }
+
+  .hourItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .ipItem {
+    gap: 12px;
+  }
+
+  .ipIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .ipLabel {
+    font-size: 10px;
+  }
+
+  .ipValue,
+  .ipValueCopy {
+    font-size: 11px;
+  }
+
+  .mapPlaceholder {
+    padding: 20px;
+  }
+
+  .mapIcon {
+    font-size: 36px;
+  }
+
+  .decorativeContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .infoCard,
+  .ipCard,
+  .mapCard {
+    padding: 40px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+  }
+
+  .contactValue,
+  .contactValueCopy {
+    font-size: 20px;
+  }
+
+  .ipValue,
+  .ipValueCopy {
+    font-size: 16px;
+  }
+}

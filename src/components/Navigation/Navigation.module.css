@@ -1,0 +1,337 @@
+/* Navigation.module.css */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navigation.scrolled {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1002;
+  position: relative;
+}
+
+.highlight {
+  color: #2dca72;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+.navLink {
+  color: #c9c9c9;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2dca72;
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 80%;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.navLink.active {
+  color: #ffffff;
+}
+
+.desktopButton {
+  padding: 15px 29px;
+  background-color: #3dd47e;
+  color: #0d0d0d;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.desktopButton:hover {
+  background-color: #2dca72;
+  transform: translateY(-1px);
+}
+
+/* Бургер-кнопка */
+.burgerButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+  position: relative;
+}
+
+.burgerLine {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.burgerButton.active .burgerLine:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burgerButton.active .burgerLine:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.burgerButton.active .burgerLine:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Оверлей */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Мобильное меню */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background: #0a0a0a;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  padding: 100px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-y: auto;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mobileNavLink {
+  color: #c9c9c9;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink.active {
+  color: #ffffff;
+}
+
+.mobileContactButton {
+  padding: 15px 29px;
+  background-color: #3dd47e;
+  color: #0d0d0d;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.mobileContactButton:hover {
+  background-color: #2dca72;
+}
+
+/* Body padding для фиксированной навигации */
+body {
+  padding-top: 80px;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+@media (max-width: 1024px) {
+  .navigation {
+    padding: 20px 30px;
+  }
+
+  .desktopMenu {
+    gap: 25px;
+  }
+
+  .navLink {
+    font-size: 16px;
+  }
+
+  .desktopButton {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navigation {
+    padding: 15px 20px;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .desktopButton {
+    display: none;
+  }
+
+  .burgerButton {
+    display: flex;
+  }
+
+  .mobileMenu {
+    max-width: 100%;
+    padding: 80px 25px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .navigation {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .mobileNavLink {
+    font-size: 20px;
+  }
+
+  .mobileContactButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .mobileMenu {
+    padding: 60px 30px 20px;
+  }
+
+  .mobileNavLinks {
+    gap: 15px;
+  }
+
+  .mobileNavLink {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .navigation {
+    padding: 30px 80px;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .desktopMenu {
+    gap: 60px;
+  }
+
+  .navLink {
+    font-size: 22px;
+  }
+
+  .desktopButton {
+    padding: 18px 35px;
+    font-size: 18px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .navLink:hover {
+    color: #c9c9c9;
+  }
+
+  .desktopButton:hover {
+    transform: none;
+  }
+
+  .mobileNavLink {
+    padding: 12px 0;
+  }
+}

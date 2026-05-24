@@ -1,0 +1,314 @@
+/* Footer.module.css */
+
+.footer {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 40px 30px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* Логотип */
+.logo {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #2dca72;
+}
+
+.description {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Социальные сети */
+.socialLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  background: rgba(45, 202, 114, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dca72;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: #2dca72;
+  color: #0a0a0a;
+  transform: translateY(-3px);
+}
+
+/* Заголовки колонок */
+.columnTitle {
+  color: #ffffff;
+  font-family: "Creato Display", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.columnTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #2dca72;
+  border-radius: 1px;
+}
+
+/* Ссылки */
+.footerLinks {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 12px;
+}
+
+.footerLinks a {
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #2dca72;
+  padding-left: 5px;
+}
+
+/* Контакты */
+.contactLinks {
+  list-style: none;
+  padding: 0;
+}
+
+.contactLinks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+.contactLinks svg {
+  color: #2dca72;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.contactLinks a {
+  color: #c9c9c9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactLinks a:hover {
+  color: #2dca72;
+}
+
+/* Режим работы */
+.workingHours {
+  margin-bottom: 20px;
+}
+
+.hourItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #c9c9c9;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+.hourItem span:first-child {
+  color: #ffffff;
+}
+
+.callbackButton {
+  width: 100%;
+  padding: 12px;
+  background: rgba(45, 202, 114, 0.1);
+  border: 1px solid rgba(45, 202, 114, 0.3);
+  border-radius: 50px;
+  color: #2dca72;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.callbackButton:hover {
+  background: #2dca72;
+  color: #0a0a0a;
+  transform: translateY(-2px);
+}
+
+/* Нижняя часть */
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  font-family: "Rubik", sans-serif;
+  font-size: 13px;
+}
+
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.legalLinks a {
+  color: #888;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legalLinks a:hover {
+  color: #2dca72;
+}
+
+.separator {
+  color: #444;
+}
+
+/* Кнопка наверх */
+.scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2dca72;
+  border: none;
+  color: #0a0a0a;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 5px 20px rgba(45, 202, 114, 0.3);
+}
+
+.scrollTop:hover {
+  background: #25a85f;
+  transform: translateY(-3px);
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+@media (max-width: 1100px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px 25px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .legalLinks {
+    justify-content: center;
+  }
+
+  .scrollTop {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .columnTitle {
+    font-size: 16px;
+  }
+
+  .contactLinks li {
+    font-size: 12px;
+  }
+
+  .hourItem {
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+
+  .legalLinks a {
+    font-size: 10px;
+  }
+}
